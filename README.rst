@@ -17,14 +17,22 @@ Idea/Workflow:
 ==============
 
 - Upon the ``build`` process, all files in the ``src/`` directory are copied
-  to the ``build/`` directory. ``src/`` is where all your website files are
-  located.
+  (and compiled) to the ``build/`` directory.
+
+  ``src/`` is where all your project files are located.
+
+  ``build/`` is the folder that is later manually deployed and served by a
+  webserver.
 
 - SCSS files are automatically compiled to CSS.
 
-- All files are minified/optimized.
+- All files are minified/optimized. The HTML is gently optimized using
+  ``posthtml`` plugins. See the ``posthtml.config.js`` file for this.
 
 - Static files have a hash in their filename to overcome browser caching issues.
+
+- You will manually upload the files in ``build/`` to a webserver. Or you add
+  some fancy rsync command to do it for you on the fly.
 
 Example Project Site / Generated Site::
 
