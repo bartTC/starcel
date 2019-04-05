@@ -1,3 +1,8 @@
 module.exports = {
-  plugins: {},
+  plugins: {
+    'posthtml-alt-always': {},
+    'posthtml-img-autosize': {
+      'root': './src',
+    },
+  },
 };

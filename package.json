@@ -5,11 +5,14 @@
     "local-web-server": "^2.6.1",
     "parcel-bundler": "^1.12.3",
     "posthtml": "^0.11.3",
+    "posthtml-alt-always": "^1.0.1",
+    "posthtml-img-autosize": "^0.1.4",
     "sass": "^1.17.4"
   },
   "scripts": {
     "devserver": "npx parcel src/index.html",
     "buildserver": "npx ws --port=1234 --hostname=localhost --directory=build/",
-    "build": "npx parcel build --out-dir=build/ --no-source-maps src/*.html"
-  }
+    "build": "NODE_ENV=production npx parcel build --out-dir=build/ --no-source-maps src/*.html"
+  },
+  "devDependencies": {}
 }
