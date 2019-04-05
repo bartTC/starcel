@@ -1,0 +1,13 @@
+{
+  "name": "starcel-project",
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "posthtml": "^0.11.3",
+    "sass": "^1.17.4"
+  },
+  "scripts": {
+    "devserver": "npx parcel src/index.html",
+    "build": "npx parcel build --out-dir=build/ --no-source-maps src/*.html"
+  }
+}
