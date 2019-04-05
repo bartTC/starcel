@@ -6,6 +6,8 @@ Starcel is a *website helper template* that helps you to transforms
 HTML/CSS/JS using ParcelJS_. It is intended to be *very very* simple and
 straightforward to use.
 
+
+
 It is *not* a static site generator or CMS like Gatsby_ or Hugo_.
 
 **You use Starcel when** you really only want to build a very simple, static
@@ -17,12 +19,12 @@ Idea/Workflow:
 ==============
 
 - Upon the build process, all files in the ``src/`` directory are copied to the
-  ``build/`` directory.
+  ``build/`` directory. ``src/`` is where all your website files are located.
 - SCSS files are automatically transformed to CSS.
 - All files are minified/optimized.
 - Static files have a hash in their filename to overcome browser caching issues.
 
-Example Site/Generated Site::
+Example Project Site / Generated Site::
 
   $ ls -lR src/
   -rw-r--r--  1 martin  staff   825 Apr  5 20:09 index.html
@@ -39,11 +41,9 @@ Example Site/Generated Site::
 Installation & Usage
 ====================
 
-#) Checkout this Github project and rename the foldername to your project.
-   Starcel is not a not a CMS, not a npm project. Just a bunch of helper files
-   that you can customize to your needs.
+#) Checkout this Github project and rename the foldername to your project name.
 
-#) Install the necessary node files: ``$ npm install``
+#) Install the helper files: ``$ npm install``
 
 #) Edit the files in the ``src/``. Delete what you don't need. This is only
    an example.
