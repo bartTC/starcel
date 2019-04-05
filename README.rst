@@ -53,13 +53,17 @@ Installation & Usage
 Commands
 ========
 
-* ``$ npm run devserver`` — Opens a development fileserver on ``localhost:1234``
-  serving the transformed files, with autoreload and all sugar such as
-  source-maps.
-
 * ``$ npm run build`` —  Compiles all files into the ``build/`` folder. All
   files are   optimized and minimized. These are the files you will *manually*
   upload to the server.
+
+* ``$ npm run devserver`` — Opens a webserver on ``localhost:1234``
+  serving the transformed files, with autoreload and all sugar such as
+  source-maps.
+
+* ``$ npm run buildserver`` — Opens a webserver on ``localhost:1234`` serving
+  the content of the ``build/`` directory so you can see whats later been
+  deployed to the server. This has no auto-reload or anything added.
 
 
 .. _ParcelJS: https://parceljs.org/
