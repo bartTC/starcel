@@ -2,32 +2,38 @@
 Starcel
 =======
 
-Starcel is a *website helper template* that helps you to transforms
-HTML/CSS/JS using ParcelJS_. It is intended to be *very very* simple and
-straightforward to use.
-
-It is *not* a static site generator or CMS like Gatsby_ or Hugo_.
+Starcel is a *static page generator* that helps you to transforms HTML/CSS/JS
+using ParcelJS_. It is *not* a full-blown static site generator or CMS like
+Gatsby_ or Hugo_.
 
 **You use Starcel when** you really only want to build a very simple, static
-website, where a CMS or anything that requires programming or a *backend* is not
-necessary. You don't need 'blogging' functionality. Yet you still want *some*
-features, e.g. the use of SCSS or CSS/JS Minification.
+website, most often a one-pager.
 
-Idea/Workflow:
-==============
+You don't need CMS or anything that requires a 'backend'. You don't need
+blogging functionality.
 
-- Upon the ``build`` process, all files in the ``src/`` directory are copied
-  (and compiled) to the ``build/`` directory.
+You need SCSS, auto-reloading during development, compression and minification
+of the generated sources.
 
-  ``src/`` is where all your project files are located.
+You don't want to re-invent the wheel every time.
 
-  ``build/`` is the folder that is later manually deployed and served by a
+Workflow:
+=========
+
+- ``src/`` folder is where all your project files are located.
+
+  ``build/`` folder is the folder that is later manually deployed and served by a
   webserver.
+
+  Upon the ``build`` process, all files in the ``src/`` directory are compilled
+  and copied to the ``build/`` directory.
 
 - SCSS files are automatically compiled to CSS.
 
-- All files are minified/optimized. The HTML is gently optimized using
-  ``posthtml`` plugins. See the ``posthtml.config.js`` file for this.
+- HTML files run through ``posthtml`` where they are gently optimized. See the
+  ``posthtml.config.js`` file whats going on.
+
+- All files are minified/optimized.
 
 - Static files have a hash in their filename to overcome browser caching issues.
 
@@ -38,9 +44,11 @@ Example Project Site / Generated Site::
 
   $ ls -lR src/
   -rw-r--r--  1 martin  staff   825 Apr  5 20:09 index.html
+  -rw-r--r--  1 martin  staff  2514 Jan 10  2015 piet.jpg
   -rw-r--r--  1 martin  staff   143 Apr  5 19:46 site.js
   -rw-r--r--  1 martin  staff    87 Apr  5 19:46 site.scss
-  -rw-r--r--  1 martin  staff  2514 Jan 10  2015 piet.jpg
+
+  $ npm run build
 
   $ ls -lR build/
   -rw-r--r--  1 martin  staff   365 Apr  5 20:29 index.html
@@ -51,14 +59,23 @@ Example Project Site / Generated Site::
 Installation & Usage
 ====================
 
-#) Checkout this Github project and rename the foldername to your project name.
+#) Checkout this Github project and rename the foldername to your project name::
 
-#) Install the helper files: ``$ npm install``
+    $ git clone git@github.com:bartTC/starcel.git my-project-name
+    $ cd my-project-name
+
+#) Install the helper files::
+
+    $ npm install
 
 #) Edit the files in the ``src/``. Delete what you don't need. This is only
    an example.
 
-#) Run the ``build`` command and upload the generated files to your server.
+#) Run the ``build`` command and upload the generated files to your server::
+
+    $ npm run build
+
+#) Upload the generated files in ``build/`` to your webserver.
 
 Commands
 ========
@@ -68,12 +85,12 @@ Commands
   upload to the server.
 
 * ``$ npm run devserver`` — Opens a webserver on ``localhost:1234``
-  serving the transformed files, with autoreload and all sugar such as
-  source-maps.
+  serving the transformed files, with auto-reload of all files on changes,
+  and additional goodies such as source-maps.
 
 * ``$ npm run buildserver`` — Opens a webserver on ``localhost:1234`` serving
   the content of the ``build/`` directory so you can see whats later been
-  deployed to the server. This has no auto-reload or anything added.
+  deployed to the server. This has no auto-reload enabled.
 
 
 .. _ParcelJS: https://parceljs.org/

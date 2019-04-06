@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Hello World</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--
@@ -18,13 +17,16 @@
 
   <body>
     <p>Hello, world!</p>
+    <p>This is how you link to <a href="./about.html">another HTML document</a>.</p>
 
     <!--
       == Static files
 
       Images or other static files such as PDFs are referenced directly.
-      Alt attribute isautomatically added by `posthtml-alt-always`.
+
+      The alt attribute is sautomatically added by `posthtml-alt-always`.
       Width and Height are set by `posthtml-img-autosize`.
+      See `posthtml.config.js` for details.
     -->
     <img src="./piet.jpg" width="auto" height="auto"/>
 
