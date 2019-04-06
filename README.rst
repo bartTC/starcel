@@ -23,8 +23,8 @@ Workflow:
 - ``src/`` folder is where all your project files are located.
 
   ``build/`` folder is where the compiled and compressed files are generated.
-   The content of this folder is later deployed to a webserver. This is done in
-   the ``npm run build`` process.
+  The content of this folder is later deployed to a webserver. This is done in
+  the ``npm run build`` process.
 
 - SCSS files are automatically compiled to CSS.
 
