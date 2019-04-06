@@ -1,6 +1,6 @@
 {
-  "name": "starcel-project",
-  "license": "All Rights Reserved",
+  "name": "starcel",
+  "license": "MIT",
   "dependencies": {
     "local-web-server": "^2.6.1",
     "parcel-bundler": "^1.12.3",
