@@ -11,5 +11,11 @@ module.exports = {
       'root': './src',
     },
 
+    // Similar to SSI this allows you to include re-usable HTML snippets.
+    // Syntax is: <include src="./header.html"></include>
+    'posthtml-include': {
+      'root': './src',
+    },
+
   },
 };

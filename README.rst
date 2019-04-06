@@ -22,15 +22,13 @@ Workflow:
 
 - ``src/`` folder is where all your project files are located.
 
-  ``build/`` folder is the folder that is later manually deployed and served by a
-  webserver.
-
-  Upon the ``build`` process, all files in the ``src/`` directory are compilled
-  and copied to the ``build/`` directory.
+  ``build/`` folder is where the compiled and compressed files are generated.
+   The content of this folder is later deployed to a webserver. This is done in
+   the ``npm run build`` process.
 
 - SCSS files are automatically compiled to CSS.
 
-- HTML files run through ``posthtml`` where they are gently optimized. See the
+- HTML files run through posthtml_ where they are gently optimized. See the
   ``posthtml.config.js`` file whats going on.
 
 - All files are minified/optimized.
@@ -96,3 +94,4 @@ Commands
 .. _ParcelJS: https://parceljs.org/
 .. _Gatsby: https://www.gatsbyjs.org/
 .. _Hugo: https://gohugo.io/
+.. _posthtml: https://github.com/posthtml/posthtml
